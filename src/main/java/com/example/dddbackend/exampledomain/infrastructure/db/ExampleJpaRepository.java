@@ -1,0 +1,7 @@
+package com.example.dddbackend.exampledomain.infrastructure.db;
+
+import com.example.dddbackend.exampledomain.infrastructure.db.model.ExampleEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ExampleJpaRepository extends JpaRepository<ExampleEntity, String> {
+}
