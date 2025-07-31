@@ -1,5 +1,6 @@
 package com.example.dddbackend.member.infrastructure.mysql.entity;
 
+import com.example.dddbackend.member.domain.Member;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -32,5 +33,14 @@ public class MemberEntity {
     private LocalDate registrationDate;
     private boolean isSmsSendingAllowed;
     private String memo;
+
+    public Member toDomain() {
+        return Member.builder()
+                .id(id)
+                .memberNumber(memberNumber)
+                .name(name)
+                .status(status)
+                .build();
+    }
 
 }

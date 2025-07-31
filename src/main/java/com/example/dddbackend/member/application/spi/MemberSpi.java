@@ -1,5 +1,7 @@
 package com.example.dddbackend.member.application.spi;
 
-public interface MemberSpi {
+import com.example.dddbackend.member.domain.Member;
 
+public interface MemberSpi {
+    Member getMemberById(Long id);
 }
