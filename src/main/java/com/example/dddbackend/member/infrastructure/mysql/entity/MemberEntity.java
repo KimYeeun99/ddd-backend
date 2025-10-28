@@ -1,6 +1,7 @@
 package com.example.dddbackend.member.infrastructure.mysql.entity;
 
 import com.example.dddbackend.member.domain.Member;
+import com.example.dddbackend.member.presentation.controller.model.request.MemberRegistRequest;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -43,4 +44,11 @@ public class MemberEntity {
                 .build();
     }
 
+    public static MemberEntity create(MemberRegistRequest req) {
+        return MemberEntity.builder()
+                .name(req.name())
+                .memberNumber(req.memberNumber())
+                .status("0004")
+                .build();
+    }
 }

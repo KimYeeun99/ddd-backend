@@ -11,8 +11,16 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class Member {
     private Long id;
-    //Enum 구현 필요
     private String status;
     private String name;
     private String memberNumber;
+    private String email;
+    private String zipcode;
+    private String address;
+    private String detailedAddress;
+    private String mobileNumber;
+    private String landlineNumber;
+    private LocalDate registrationDate;
+    private boolean isSmsSendingAllowed;
+    private String memo;
 }

@@ -17,7 +17,7 @@ public class MemberAssembler implements MemberApi {
     }
 
     @Override
-    public void registerMember(MemberRegistRequest request) {
-
+    public MemberResponse registerMember(MemberRegistRequest request) {
+        return MemberResponse.of(memberSpi.registMember(request));
     }
 }

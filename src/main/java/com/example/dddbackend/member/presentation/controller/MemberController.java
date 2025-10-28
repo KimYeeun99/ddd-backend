@@ -1,6 +1,7 @@
 package com.example.dddbackend.member.presentation.controller;
 
 import com.example.dddbackend.member.application.api.MemberApi;
+import com.example.dddbackend.member.presentation.controller.model.request.MemberRegistRequest;
 import com.example.dddbackend.member.presentation.controller.model.response.MemberResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +14,10 @@ public class MemberController {
 
     public ResponseEntity<MemberResponse> getMemberById(Long id) {
         return ResponseEntity.ok(memberApi.getMemberById(id));
+    }
+
+    public ResponseEntity<MemberResponse> registMember(MemberRegistRequest request) {
+        return ResponseEntity.ok(memberApi.registerMember(request));
     }
 
 }

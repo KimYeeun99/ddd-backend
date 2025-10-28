@@ -1,5 +1,6 @@
 package com.example.dddbackend.member.presentation.controller.model.request;
 
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -13,6 +14,7 @@ public record MemberRegistRequest(
         String name,
         @NotNull
         String memberNumber,
+        @Email
         String email,
         String zipcode,
         String address,

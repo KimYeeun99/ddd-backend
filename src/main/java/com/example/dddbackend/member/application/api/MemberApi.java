@@ -5,5 +5,5 @@ import com.example.dddbackend.member.presentation.controller.model.response.Memb
 
 public interface MemberApi {
     MemberResponse getMemberById(Long id);
-    void registerMember(MemberRegistRequest request);
+    MemberResponse registerMember(MemberRegistRequest request);
 }
